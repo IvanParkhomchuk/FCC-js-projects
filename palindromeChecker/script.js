@@ -1,3 +1,7 @@
+const button = document.getElementById('btn');
+let userInput = document.getElementById('input');
+let result = document.getElementById('is-palindrome');
+
 function palindrome(str) {
     let regex = /[\W_]/g;
     let arr = str.toLowerCase().replace(regex, '').split('');
@@ -8,5 +12,7 @@ function palindrome(str) {
     }
     return true;
 }
-  
-console.log( palindrome("A man, a plan, a canal. Panama") );
+
+button.addEventListener('click', function() {
+    result.textContent = palindrome(userInput.value);
+});
