@@ -17,7 +17,7 @@ function palindrome(str) {
 }
 
 function timer() {
-    return setInterval(() => {
+    return setTimeout(() => {
         result.textContent = '';
     }, TIMEOUT)
 }
@@ -37,9 +37,11 @@ function showResult(word) {
 userInput.addEventListener('keypress', function(event) {
     if (event.key === 'Enter') {
         showResult(palindrome(userInput.value));
+        clearTimeout(timer());
     }
 });
 
 button.addEventListener('click', function() {
     showResult(palindrome(userInput.value));
+    clearTimeout(timer());
 });
