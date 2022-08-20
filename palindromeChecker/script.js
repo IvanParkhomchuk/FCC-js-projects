@@ -19,6 +19,8 @@ function palindrome(str) {
 function timer() {
     return setTimeout(() => {
         result.textContent = '';
+        result.style.color = 'black';
+        result.classList.remove('move');
     }, TIMEOUT)
 }
 
@@ -31,6 +33,7 @@ function showResult(word) {
         result.style.color = 'red';
     }
 
+    result.classList.add('move');
     timer();
 }
 

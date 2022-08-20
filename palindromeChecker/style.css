@@ -15,6 +15,14 @@
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+.container-block {
+    height: 10em;
+}
+
+.container-block-control {
+    display: flex;
+}
+
 .title {
     font-size: 60px;
     padding: 30px;
@@ -29,6 +37,7 @@
     letter-spacing: normal;
     font-size: 20px;
     margin: 0 10px;
+    padding: 5px 10px;
 }
 
 #btn {
@@ -36,8 +45,7 @@
     background-color: #fff;
     border: 2px solid black;
     color: black;
-    padding: 10px 20px;
-    margin: 30px;
+    padding: 5px 10px;
     cursor: pointer;
 }
 
@@ -49,4 +57,22 @@
 #btn:active {
     background-color: rgb(59, 59, 59);
     border: 2px solid rgb(59, 59, 59);
+}
+
+#is-palindrome {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    right: 0;
+}
+
+.move {
+    animation: move 3s 1;
+}
+
+@keyframes move {
+    0% {top: -50px;}
+    20% {top: 50px;}
+    80% {top: 50px;}
+    100% {top: -50px;}
 }
