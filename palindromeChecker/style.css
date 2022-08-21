@@ -19,10 +19,6 @@
     height: 10em;
 }
 
-.container-block-control {
-    display: flex;
-}
-
 .title {
     font-size: 60px;
     padding: 30px;
@@ -30,6 +26,10 @@
 
 .text {
     font-size: 30px;
+}
+
+#myForm {
+    display: flex;
 }
 
 #input {
@@ -72,7 +72,7 @@
 
 @keyframes move {
     0% {top: -50px;}
-    20% {top: 50px;}
-    80% {top: 50px;}
+    20% {top: 40px;}
+    80% {top: 40px;}
     100% {top: -50px;}
 }

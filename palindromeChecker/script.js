@@ -1,4 +1,4 @@
-const button = document.getElementById('btn');
+const form = document.getElementById('myForm');
 let userInput = document.getElementById('input');
 let result = document.getElementById('is-palindrome');
 
@@ -37,14 +37,8 @@ function showResult(word) {
     timer();
 }
 
-userInput.addEventListener('keypress', function(event) {
-    if (event.key === 'Enter') {
-        showResult(palindrome(userInput.value));
-        clearTimeout(timer());
-    }
-});
-
-button.addEventListener('click', function() {
+form.addEventListener('submit', function(e) {
+    e.preventDefault();
     showResult(palindrome(userInput.value));
     clearTimeout(timer());
 });
