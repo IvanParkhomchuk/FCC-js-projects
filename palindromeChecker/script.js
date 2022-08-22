@@ -1,4 +1,4 @@
-const button = document.getElementById('btn');
+const form = document.getElementById('myForm');
 let userInput = document.getElementById('input');
 let result = document.getElementById('is-palindrome');
 
@@ -17,8 +17,10 @@ function palindrome(str) {
 }
 
 function timer() {
-    return setInterval(() => {
+    return setTimeout(() => {
         result.textContent = '';
+        result.style.color = 'black';
+        result.classList.remove('move');
     }, TIMEOUT)
 }
 
@@ -31,15 +33,12 @@ function showResult(word) {
         result.style.color = 'red';
     }
 
+    result.classList.add('move');
     timer();
 }
 
-userInput.addEventListener('keypress', function(event) {
-    if (event.key === 'Enter') {
-        showResult(palindrome(userInput.value));
-    }
-});
-
-button.addEventListener('click', function() {
+form.addEventListener('submit', function(e) {
+    e.preventDefault();
     showResult(palindrome(userInput.value));
+    clearTimeout(timer());
 });
