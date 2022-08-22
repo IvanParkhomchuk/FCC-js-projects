@@ -28,7 +28,7 @@
     font-size: 30px;
 }
 
-.myForm {
+.form {
     display: flex;
 }
 
@@ -59,7 +59,7 @@
     border: 2px solid rgb(59, 59, 59);
 }
 
-.is-palindrome {
+.palindrome-result {
     position: absolute;
     top: -50px;
     left: 0;

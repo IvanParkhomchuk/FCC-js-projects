@@ -1,6 +1,6 @@
-const form = document.querySelector('.myForm');
-let userInput = document.querySelector('.input');
-let result = document.getElementById('convertedNum');
+const form = document.getElementById('my-form');
+let userInput = document.getElementById('user-input');
+let result = document.getElementById('converted-num');
 
 function convertToRoman(num) {
     let result = '';

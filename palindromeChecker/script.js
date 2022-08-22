@@ -1,6 +1,6 @@
-const form = document.querySelector('.myForm');
-let userInput = document.querySelector('.input');
-let result = document.querySelector('.is-palindrome');
+const form = document.getElementById('my-form');
+let userInput = document.getElementById('user-input');
+let result = document.getElementById('is-palindrome');
 
 const TIMEOUT = 3000;
 
