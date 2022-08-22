@@ -1,5 +1,5 @@
-const form = document.getElementById('myForm');
-let userInput = document.getElementById('input');
+const form = document.getElementById('my-form');
+let userInput = document.getElementById('user-input');
 let result = document.getElementById('is-palindrome');
 
 const TIMEOUT = 3000;
