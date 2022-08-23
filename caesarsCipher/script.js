@@ -1,23 +1,29 @@
 const form = document.getElementById('my-form');
 let userInput = document.getElementById('user-input');
+let cipherPadding = document.getElementById('cipher-padding');
 let result = document.getElementById('ciphered-word');
 const copyButton = document.getElementById('copy-btn');
 const copied = document.getElementById('copied');
 
+const MIN_CHAR = 65;
+const MAX_CHAR = 90;
+
 const TIMEOUT = 3000;
 
-function rot13(str) {
+function cipher(str, padding) {
     let arr = str.toUpperCase().split('');
     let newArr = [];
 
+    if (padding === 0) padding = 13;
+
     for (let i = 0; i < arr.length; i++) {
-        if (arr[i].charCodeAt() < 65 || arr[i].charCodeAt() > 90) {
+        if (arr[i].charCodeAt() < MIN_CHAR || arr[i].charCodeAt() > MAX_CHAR) {
             newArr.push(arr[i]);
         }
-        else if (arr[i].charCodeAt() + 13 > 90) {
-            newArr.push(String.fromCharCode(arr[i].charCodeAt() - 13));
+        else if (arr[i].charCodeAt() + padding > MAX_CHAR) {
+            newArr.push(String.fromCharCode(arr[i].charCodeAt() - padding));
         } else {
-            newArr.push(String.fromCharCode(arr[i].charCodeAt() + 13));
+            newArr.push(String.fromCharCode(arr[i].charCodeAt() + padding));
         }
     }
   
@@ -30,13 +36,13 @@ function timer() {
     }, TIMEOUT)
 }
 
-function showResult(num) {
-    result.textContent = num;
+function showResult(str) {
+    result.textContent = str;
 }
    
 form.addEventListener('submit', function(e) {
     e.preventDefault();
-    showResult(rot13(userInput.value));
+    showResult(cipher(userInput.value, Number(cipherPadding.value)));
 });
 
 copyButton.addEventListener('click', function() {
