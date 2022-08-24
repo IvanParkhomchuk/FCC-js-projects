@@ -89,7 +89,10 @@
 }
 
 .result-text {
+    padding: 10px;
+    border: none;
     border-bottom: 2px solid black;
+    resize: none;
 }
 
 .move {
