@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Caesars Cipher</title>
+
+        <link rel="stylesheet" href="../styles/projectsStyle.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="title">CAESARS CIPHER</h1>
+
+            <div class="container-block">
+                <div>
+                    <form class="form" id="my-form">
+                        <div class="form-block">
+                            <p class="text">Enter your word:<input type="text" class="input" id="user-input"></p>
+                            <button type="submit" class="btn">Cipher</button>
+                        </div>
+
+                        <div class="form-block">
+                            <p class="text">Enter number of padding:<input type="number" class="input" id="cipher-padding"></p>
+                        </div>
+                    </form>
+
+                    <div class="result-block">
+                        <textarea readonly class="text result-text" id="ciphered-word"></textarea>
+                        <button class="btn" id="copy-btn">copy!</button>
+                    </div>
+                    
+                    <p class="text copy-notification" id="copied">copied!</p>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>

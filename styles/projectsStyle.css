@@ -30,6 +30,13 @@
 
 .form {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-block {
+    display: flex;
+    padding: 10px 0;
 }
 
 .input {
@@ -47,6 +54,7 @@
     color: black;
     padding: 5px 10px;
     cursor: pointer;
+    margin: 10px 10px;
 }
 
 .btn:hover {
@@ -66,13 +74,34 @@
     right: 0;
 }
 
+.result-block {
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.copy-notification {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    right: 0;
+    color: green;
+}
+
+.result-text {
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid black;
+    resize: none;
+}
+
 .move {
     animation: move 3s 1;
 }
 
 @keyframes move {
     0% {top: -50px;}
-    20% {top: 40px;}
-    80% {top: 40px;}
+    20% {top: 20px;}
+    80% {top: 20px;}
     100% {top: -50px;}
 }
