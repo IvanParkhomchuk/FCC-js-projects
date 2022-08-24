@@ -7,7 +7,6 @@ const copied = document.getElementById('copied');
 
 const MIN_CHAR = 65;
 const MAX_CHAR = 90;
-const ALPHABET_LEN = 26;
 
 const TIMEOUT = 3000;
 
@@ -22,7 +21,7 @@ function cipher(str, padding) {
             newArr.push(arr[i]);
         }
         else if (arr[i].charCodeAt() + padding > MAX_CHAR) {
-            newArr.push(String.fromCharCode((arr[i].charCodeAt() + padding) - ALPHABET_LEN));
+            newArr.push(String.fromCharCode((arr[i].charCodeAt() + padding) - (MAX_CHAR - MIN_CHAR + 1)));
         } else {
             newArr.push(String.fromCharCode(arr[i].charCodeAt() + padding));
         }
