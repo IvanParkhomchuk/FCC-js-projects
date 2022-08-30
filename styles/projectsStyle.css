@@ -72,7 +72,7 @@
     border: 2px solid rgb(59, 59, 59);
 }
 
-.palindrome-result, .valid-number-result {
+.palindrome-result {
     position: absolute;
     top: -50px;
     left: 0;
@@ -109,14 +109,6 @@
     20% {top: 20px;}
     80% {top: 20px;}
     100% {top: -50px;}
-}
-
-.green-text {
-    color: green;
-}
-
-.red-text {
-    color: red;
 }
 
 .table {
